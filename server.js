@@ -13,7 +13,6 @@ mongoose.connect(config.uri, (err)=>{
         console.log("connection established ", +config.db);
     }
 });
-
 app.use(express.static(__dirname+ '/client/dist/Mean'));
 app.get('*', function(req, res){
     res.sendFile(path.join(__dirname + '/client/Mean/dist/Mean/index.html'));
